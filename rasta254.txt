@@ -1,0 +1,54 @@
+# Nmap 7.60 scan initiated Tue Mar 20 14:20:37 2018 as: nmap -sV -sC -T4 -p- -vv --top-ports 5000 -oN rasta254.txt 10.10.110.254
+Increasing send delay for 10.10.110.254 from 0 to 5 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.10.110.254 from 5 to 10 due to 11 out of 22 dropped probes since last increase.
+Nmap scan report for 10.10.110.254
+Host is up, received syn-ack ttl 126 (0.064s latency).
+Scanned at 2018-03-20 14:20:37 GMT for 223s
+Not shown: 4999 filtered ports
+Reason: 4999 no-responses
+PORT    STATE SERVICE  REASON          VERSION
+443/tcp open  ssl/http syn-ack ttl 126 Microsoft IIS httpd 10.0
+|_http-favicon: Unknown favicon MD5: B1C7D8B6759A49ED9C399683F179B04C
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Microsoft-IIS/10.0
+| http-title: Outlook
+|_Requested resource was https://10.10.110.254/owa/auth/logon.aspx?url=https%3a%2f%2f10.10.110.254%2fowa%2f&reason=0
+| ssl-cert: Subject: commonName=mx01
+| Subject Alternative Name: DNS:mx01, DNS:mx01.rastalabs.local
+| Issuer: commonName=mx01
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-10-15T14:05:13
+| Not valid after:  2022-10-15T14:05:13
+| MD5:   0618 3659 6c58 f268 07d5 7fa8 4a98 6ec7
+| SHA-1: 5888 ece6 0c32 4df3 621b 3ab2 dd9e 4620 8280 713e
+| -----BEGIN CERTIFICATE-----
+| MIIDBDCCAeygAwIBAgIQLKPOsHmyxoJCK6C/saBLYzANBgkqhkiG9w0BAQUFADAP
+| MQ0wCwYDVQQDEwRteDAxMB4XDTE3MTAxNTE0MDUxM1oXDTIyMTAxNTE0MDUxM1ow
+| DzENMAsGA1UEAxMEbXgwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+| APAqAKM5wmx+y+XYa7j+fLvcinhFyQsSEynC1AR2V+4heZ02UTdV1UIwnkI2CPqA
+| i9euMwUqrfFUhluIONFivZsn09G7t9yDOqv1NKzparulvfC212JImxTA2tAA4hBA
+| AKP2BAOfABgS7Wl6QO8rAbjfukojn2UnwZf2DHYLKJC3JQhbgPvmfZFBfpDBMlnl
+| FMATKPKo8FiWh6R6cERVfXd+9enCFhIMEsNJcZPLvo4GcNDKyW5Y+9/scAXFvMFa
+| ETIYVkgh95LLRqlORULs83rbmtmutExH1o1nwKndiRLEjLhQjSuPr+hqsXbtvZ8Y
+| Yu3/SPNhPJdBt1xTkrHsSm0CAwEAAaNcMFowDgYDVR0PAQH/BAQDAgWgMCUGA1Ud
+| EQQeMByCBG14MDGCFG14MDEucmFzdGFsYWJzLmxvY2FsMBMGA1UdJQQMMAoGCCsG
+| AQUFBwMBMAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQEFBQADggEBAACrE5I/Vst1
+| 2kFnD53KOOwzyG0+vhYN/4GTeBVn1R/YDAq0zB4sFpms6ae5ZhOmRCAsp59gst+0
+| 3nFOlq7bbRLRr196ai5JAOmi5gdqqPLEtvQGnHZCdy2dPOPbn9EHM/Blcf7IUwcZ
+| zwr/tDylQPQqzDPbwxDHl/U0XmFtnVWi+QxxIcerFPmUVZt8LNWIF7osbKednrXa
+| CQmHHLc8zX6pFGMf7Fhg6lD4GTLpW5TFIrQdG9UYyFBqChHJSTKUO3gHwPkXYeBf
+| xlaRgK4YORK3fjTE8wbl7EZQvRgGnEPXxLgyYUKkvQQrrMrXfERd5Z/DXcqQdPX7
+| EqKEw4SEOus=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2018-03-20T14:24:43+00:00; +25s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 24s, deviation: 0s, median: 24s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar 20 14:24:20 2018 -- 1 IP address (1 host up) scanned in 223.44 seconds

@@ -1,0 +1,72 @@
+# Nmap 7.60 scan initiated Tue Mar 20 14:18:33 2018 as: nmap -sV -sC -T4 -p- -vv --top-ports 5000 -oN rasta10.txt 10.10.110.10
+Nmap scan report for 10.10.110.10
+Host is up, received echo-reply ttl 127 (0.052s latency).
+Scanned at 2018-03-20 14:18:33 GMT for 77s
+Not shown: 4994 filtered ports
+Reason: 4994 no-responses
+PORT     STATE SERVICE       REASON          VERSION
+80/tcp   open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Home - RastaLabs
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| ssl-cert: Subject: commonName=web01.rastalabs.local
+| Issuer: commonName=web01.rastalabs.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-10-20T12:49:18
+| Not valid after:  2018-04-21T12:49:18
+| MD5:   9da0 1f27 32ba 1a8b d3d6 f6c9 546c 5c3e
+| SHA-1: 9865 c519 429a 37dd a487 136a a054 bdd6 6cf1 c5db
+| -----BEGIN CERTIFICATE-----
+| MIIC7jCCAdagAwIBAgIQSxw6pJyJoIxMTTkF6Uz85zANBgkqhkiG9w0BAQsFADAg
+| MR4wHAYDVQQDExV3ZWIwMS5yYXN0YWxhYnMubG9jYWwwHhcNMTcxMDIwMTI0OTE4
+| WhcNMTgwNDIxMTI0OTE4WjAgMR4wHAYDVQQDExV3ZWIwMS5yYXN0YWxhYnMubG9j
+| YWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZvxE1LGkFgxQcSVDE
+| OyyP8IU5c9WckRV7dfJ6tsO83BbOrOXihPn4nEF+z1Tv/bclwqCMNO13SMjuO55U
+| a/MZY2vsFnba8nLCw+L0LVtjQdsOIDWjomULfFV8ytIL3k0PAagB7mO3R56thICX
+| 5aQJpIs3aHFwfdkXjMPSai+1sbyWkft2aJkuUKt2bLJJw1n7tNubQP8ATaZhCD/c
+| HMmk+dqaMc1QBUBXNW8Kpt0HTH9dGWg+R7Uq8BrajoKcV4E7o0eIUsPFuGnqWTw7
+| FnCdU4uGZ1xVjD03DmzQjEW98prodx1NcdSOdfAQ5ca9JIsELrr2e33sWqoYmFRM
+| XDkDAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDAN
+| BgkqhkiG9w0BAQsFAAOCAQEADbPqRcpm89VPCT8Sb5t9N0XlKgWc+WTMxumJzEm4
+| l23f7bFlvsLEMUjrsTwTExJHSE8fW4pSLbJ7oR2xAr0JY9sBcXWNV+l0JPIu22a9
+| EFU10szgoHE7Psz7Y0mKm+8DCaIYwfsZEsV92GHCfwIIRjKjUMG9Uii7/Lq3n1Wz
+| Jz11SPedTQme1voWTGezsh/KGd1bO/P9ZZQvtIOSEkB9mz2l0dGryR7DpurE//CH
+| j7+MvuiXDPqeig7iYMzXrSJmWMb9MG4tbgKaKErFoBg3Fo/SfzIHutgQJ2blG8B+
+| wK25mdhTWpFa08kY30V+xsxXXHvEQnF4jEtN8qgLesYM5g==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2018-03-20T14:19:36+00:00; +25s from scanner time.
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 25s, deviation: 0s, median: 24s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 21653/tcp): CLEAN (Timeout)
+|   Check 2 (port 39061/tcp): CLEAN (Timeout)
+|   Check 3 (port 13692/udp): CLEAN (Timeout)
+|   Check 4 (port 54611/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-20 14:19:39
+|_  start_date: 2018-02-22 10:47:39
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar 20 14:19:50 2018 -- 1 IP address (1 host up) scanned in 77.73 seconds
